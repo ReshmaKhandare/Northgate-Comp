@@ -1,0 +1,353 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="AddArrearsAction" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="In_Int_Timeout" Type="InArgument(x:Int32)" />
+    <x:Property Name="In_Str_Note" Type="InArgument(x:String)" />
+    <x:Property Name="In_Str_Action" Type="InArgument(x:String)" />
+    <x:Property Name="In_DateTime_TenantStartDate" Type="InArgument(s:DateTime)" />
+    <x:Property Name="In_DateTime_UCPaymentDate" Type="InArgument(s:DateTime)" />
+    <x:Property Name="In_Str_Balance" Type="InArgument(x:String)" />
+    <x:Property Name="In_Str_UCDependant" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:AddArrearsAction.In_Int_Timeout>
+    <InArgument x:TypeArguments="x:Int32" />
+  </this:AddArrearsAction.In_Int_Timeout>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1203,3257</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>AddArrearsAction_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="56">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="22">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="AddArrearsAction" sap:VirtualizedContainerService.HintSize="697,3192" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Attach to Northgate" sap:VirtualizedContainerService.HintSize="655,3100" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="693af79f8de7d7aceaef7d39a72fd9c7" Selector="&lt;html title='Northgate Housing V*' /&gt;">
+      <ui:BrowserScope.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="621,2954" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Boolean" Name="bool_ElementExists" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" sap:VirtualizedContainerService.HintSize="579,68" sap2010:WorkflowViewState.IdRef="Activate_1">
+              <ui:Activate.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="54d6c605-f2d4-42df-aad2-76c7c64458e4">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Activate.Target>
+            </ui:Activate>
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Ensure at the top" sap:VirtualizedContainerService.HintSize="579,116" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="home" KeyModifiers="None" SpecialKey="True">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="75857506-f0d4-44af-be23-a9886ac0718a">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Expand Create arrears action" sap:VirtualizedContainerService.HintSize="579,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5a811b29-f882-4fff-bace-66fd5a082120" InformativeScreenshot="78bd0398c36feeceeca7bd5dfde72b64" Selector="&lt;webctrl parentid='aca_report' tag='H3' aaname=' Arrears Actions*' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='A' aaname='Create' class='repmenu' /&gt;" TimeoutMS="[In_Int_Timeout]" WaitForReady="INTERACTIVE" />
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Create arrears action" sap:VirtualizedContainerService.HintSize="579,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1a3009cd-87c1-4864-b4c7-dec2d0c58766" InformativeScreenshot="555b2be10a21f1007c273189a9bb9ab2" Selector="&lt;webctrl parentid='MENU_HOLDER_CONT' tag='A' aaname='Create Arrears Action' /&gt;" TimeoutMS="[In_Int_Timeout]" WaitForReady="INTERACTIVE" />
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:UiElementExists DisplayName="Check if create arrears action page has loaded" Exists="[bool_ElementExists]" sap:VirtualizedContainerService.HintSize="579,68" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+              <ui:UiElementExists.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="3ecb54e0-f125-47a1-8ddd-5038fe93f9f7" TimeoutMS="[In_Int_Timeout]" WaitForReady="INTERACTIVE" />
+              </ui:UiElementExists.Target>
+            </ui:UiElementExists>
+            <If Condition="[bool_ElementExists]" DisplayName="If Loaded" sap:VirtualizedContainerService.HintSize="579,252" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Then>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Successfully loaded create arrears action page&quot;]" />
+              </If.Then>
+              <If.Else>
+                <Throw Exception="[New Exception(&quot;Failed to move to the 'Create account' sub-page&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_1" />
+              </If.Else>
+            </If>
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select requested action from Action dropdown" sap:VirtualizedContainerService.HintSize="579,134" sap2010:WorkflowViewState.IdRef="SelectItem_1" Item="[In_Str_Action]">
+              <ui:SelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="50">
+                  <x:String>Please Select</x:String>
+                  <x:String>AACO - INFO - Account Audit Carried Out -</x:String>
+                  <x:String>AB - INFO - Abandoned Prior To Eviction -</x:String>
+                  <x:String>ABAN - INFO - 7 day abandonment letter -</x:String>
+                  <x:String>ADJ1 - COURT - Adjourned Generally on Terms -</x:String>
+                  <x:String>ADJ2 - COURT - Adjourned To New Date -</x:String>
+                  <x:String>AEW - EVICTION - Application for Eviction Warrant -</x:String>
+                  <x:String>APDP - COURT - Application for Date of Possession -</x:String>
+                  <x:String>ARRG - INFO - Arrangement Details -</x:String>
+                  <x:String>AVCL - INFO - AVC Tariff Reduction Letter -</x:String>
+                  <x:String>BARR - INFO - Broken Payment Arrangement -</x:String>
+                  <x:String>BCDE - INFO - Barcode Letter -</x:String>
+                  <x:String>BCIP - INFO - Benefit Cap In Place -</x:String>
+                  <x:String>BEML - INFO - Email barcode for use on phone -</x:String>
+                  <x:String>BOTR - INFO - Back on Track Requested -</x:String>
+                  <x:String>BRL1 - INFO - Benefit Recovery Letter -</x:String>
+                  <x:String>BSCL - INFO - Breathing Space Confirmation Letter -</x:String>
+                  <x:String>BSNR - INFO - Breathing Space Notification Received -</x:String>
+                  <x:String>C2CS - INFO - Call to Collect Success -</x:String>
+                  <x:String>CACO - INFO - Cleared Account Costs Outstanding -</x:String>
+                  <x:String>CCA - INFO - County Court Appeal -</x:String>
+                  <x:String>CCBC - INFO - Carecall bar code letter -</x:String>
+                  <x:String>CCCB - INFO - Closed CC Account - Credit Balance -</x:String>
+                  <x:String>CCDB - INFO - Carecall Bulk DD Notification -</x:String>
+                  <x:String>CCDC - INFO - Carecall DD Cancellation -</x:String>
+                  <x:String>CCDF - INFO - Carecall DD Letter and Mandate -</x:String>
+                  <x:String>CCDN - INFO - Carecall Notification of DD payments -</x:String>
+                  <x:String>CCDR - INFO - Carecall DD Payment Refused -</x:String>
+                  <x:String>CCIN - INFO - Carecall/warden charge Invoice -</x:String>
+                  <x:String>CCNC - INFO - Private Carecall Increase Letter -</x:String>
+                  <x:String>CCNI - INFO - Private Carecall Increase Letter -</x:String>
+                  <x:String>CCOB - INFO - Closed CC Account - Outstanding balance -</x:String>
+                  <x:String>CCRE - INFO - Carecall Replacement Equpment Invoice -</x:String>
+                  <x:String>CCSO - INFO - Carecall SO payments going to SAP -</x:String>
+                  <x:String>CCWD - INFO - Carecall Welcome Letter - Dataload Cases -</x:String>
+                  <x:String>CCWL - INFO - Carecall Welcome Letter -</x:String>
+                  <x:String>CD - COURT - Court Date -</x:String>
+                  <x:String>CE - COURT - Court Entry Letter -</x:String>
+                  <x:String>CED - OTHER - Court Entry Documents -</x:String>
+                  <x:String>CEL - OTHER - Court Entry Letter and Documents -</x:String>
+                  <x:String>CEWL - INFO - Carers Emergency Alert Card Letter -</x:String>
+                  <x:String>CI - INFO - Court Interview Letter -</x:String>
+                  <x:String>CIAS - INFO - Court Interview Letter Assured -</x:String>
+                  <x:String>CID - COURT - Court Information Document -</x:String>
+                  <x:String>CII - INFO - Court Interview Intro Letter -</x:String>
+                  <x:String>CIRC - INFO - Family Circumstances -</x:String>
+                  <x:String>CIVI - INFO - Civica Note -</x:String>
+                  <x:String>CORR - INFO - Correspondence -</x:String>
+                  <x:String>COST - INFO - Costs Invoice Raised -</x:String>
+                  <x:String>CR1 - COURT - Court Re-entry 1 (Costs Only) -</x:String>
+                </scg:List>
+              </ui:SelectItem.Items>
+              <ui:SelectItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="cd5dcd27-efb2-430d-a3d7-36fbc37c3a8c" InformativeScreenshot="b64eeddfa2157ce97de860f03e9cffd2" Selector="&lt;webctrl tag='SELECT' aaname='*Action' /&gt;" TimeoutMS="[In_Int_Timeout]" WaitForReady="INTERACTIVE" />
+              </ui:SelectItem.Target>
+            </ui:SelectItem>
+            <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DeselectAfter="True" DisplayName="Enter requested note" EmptyField="True" sap:VirtualizedContainerService.HintSize="579,134" sap2010:WorkflowViewState.IdRef="TypeInto_7" SimulateType="True" Text="[In_Str_Note]">
+              <ui:TypeInto.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="06ace3b2-9bcb-47eb-b382-28689c9f48f8" InformativeScreenshot="3aec644f2cd10058b18a642bff38011f" Selector="&lt;webctrl tag='TEXTAREA' aaname='Notepad Text' class='textarea' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:TypeInto.Target>
+            </ui:TypeInto>
+            <If Condition="[In_DateTime_TenantStartDate.ToString &lt;&gt; &quot;01/01/0001 00:00:00&quot;]" DisplayName="If a start date has been provided" sap:VirtualizedContainerService.HintSize="579,323" sap2010:WorkflowViewState.IdRef="If_4">
+              <If.Then>
+                <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DeselectAfter="True" DisplayName="Enter tenant start date" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_8" Text="[In_DateTime_TenantStartDate.ToString(&quot;dd-MMM-yyyy&quot;).ToUpper]">
+                  <ui:TypeInto.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c26b6fac-0f31-4211-a168-f0c1c834697f" InformativeScreenshot="82bce0f2ef19aea7e83a5befa1cdb1ca" Selector="&lt;webctrl id='F05_1' tableCol='1' tableRow='1' tag='INPUT' type='text' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:TypeInto.Target>
+                </ui:TypeInto>
+              </If.Then>
+            </If>
+            <If Condition="[In_DateTime_UCPaymentDate.ToString &lt;&gt; &quot;01/01/0001 00:00:00&quot;]" DisplayName="If a payment date has been provided" sap:VirtualizedContainerService.HintSize="579,323" sap2010:WorkflowViewState.IdRef="If_5">
+              <If.Then>
+                <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DeselectAfter="True" DisplayName="Enter UC Payment Date" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_9" Text="[In_DateTime_UCPaymentDate.ToString(&quot;dd-MMM-yyyy&quot;).ToUpper]">
+                  <ui:TypeInto.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c26b6fac-0f31-4211-a168-f0c1c834697f" InformativeScreenshot="82bce0f2ef19aea7e83a5befa1cdb1ca" Selector="&lt;webctrl id='F05_2' tableCol='2' tableRow='1' tag='INPUT' type='text' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:TypeInto.Target>
+                </ui:TypeInto>
+              </If.Then>
+            </If>
+            <If Condition="[String.IsNullOrWhiteSpace(In_Str_Balance)=False]" sap:VirtualizedContainerService.HintSize="579,323" sap2010:WorkflowViewState.IdRef="If_6">
+              <If.Then>
+                <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Enter arrears at claim date" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_10" Text="[In_Str_Balance]">
+                  <ui:TypeInto.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c14a8f62-06dd-449a-9df0-cb5fd4ae6c7c" InformativeScreenshot="3058ed14388b6b176186e5293a678bbe" Selector="&lt;webctrl tag='INPUT' type='text' rowName='*Arrears at claim date' idx='1' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:TypeInto.Target>
+                </ui:TypeInto>
+              </If.Then>
+              <If.Else>
+                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <If Condition="[String.IsNullOrWhiteSpace(In_Str_UCDependant) = False]" sap:VirtualizedContainerService.HintSize="579,323" sap2010:WorkflowViewState.IdRef="If_7">
+              <If.Then>
+                <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Enter UC dependant" sap:VirtualizedContainerService.HintSize="359,134" sap2010:WorkflowViewState.IdRef="SelectItem_5" Item="[In_Str_UCDependant]">
+                  <ui:SelectItem.Items>
+                    <scg:List x:TypeArguments="x:String" Capacity="4">
+                      <x:String>Please Select</x:String>
+                      <x:String>Yes</x:String>
+                      <x:String>No</x:String>
+                    </scg:List>
+                  </ui:SelectItem.Items>
+                  <ui:SelectItem.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4ac8eb48-839d-454a-8712-d5c3b3286ea4" InformativeScreenshot="7631d757d51e67d9008edcb7ba4676a8" Selector="&lt;webctrl tableCol='1' tableRow='3' tag='SELECT' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:SelectItem.Target>
+                </ui:SelectItem>
+              </If.Then>
+              <If.Else>
+                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Save" sap:VirtualizedContainerService.HintSize="579,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e1dadce4-fc08-4486-a874-83b7f959e9a5" InformativeScreenshot="070a89c58217fa727277b98e74801519" Selector="&lt;webctrl id='saveButton' tag='INPUT' type='button' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+          </Sequence>
+        </ActivityAction>
+      </ui:BrowserScope.Body>
+    </ui:BrowserScope>
+  </Sequence>
+</Activity>
